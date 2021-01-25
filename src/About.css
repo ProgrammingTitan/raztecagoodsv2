@@ -1,0 +1,107 @@
+
+.img-wrap{
+    position: relative;
+        display: inline-block;
+        width: 100%;
+}
+
+.img-wrap img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+}
+
+.img-wrap h1{
+    position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: var(--primary-double-hover-Color);
+        color: #fff;
+        /* visibility: hidden; */
+        opacity: 0.6;
+        margin: auto;
+        margin-bottom: 0;
+        text-align: center;
+        display: flex;
+      justify-content: center;
+      align-items: center;
+    /* transition effect. not necessary */
+    transition: opacity .2s, visibility .2s;
+}
+
+.img-wrap h3{
+    position: absolute;
+        top: 90px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: var(--primary-double-hover-Color);
+        color: #fff;
+        /* visibility: hidden; */
+        opacity: 0.6;
+        margin: auto;
+        margin-bottom: 0;
+        text-align: center;
+        display: flex;
+      justify-content: center;
+      align-items: center;
+    /* transition effect. not necessary */
+    transition: opacity .2s, visibility .2s;
+}
+
+@media(max-width: 699px)
+{
+    .img-wrap img{
+        width: 100%;
+        height: auto;
+    }
+
+    .img-wrap h1{
+        font-size: 1rem;
+        vertical-align: center;
+        
+    }
+    .img-wrap h3{
+        font-size: 0.8rem;
+        vertical-align: center;
+        
+    }
+    .about-box{
+        width: 90%;
+        margin: 0.1rem 1rem;
+        display: block;
+    }
+    .about-box img{
+        width: 100%;
+        height: auto;
+    }
+    .about-box h4{
+        width: 100%;
+        
+    }
+    
+}
+
+@media(min-width: 700px)
+{
+    .img-wrap h1{
+        font-size: 3rem;
+    }
+    .img-wrap img{
+        height: 100vh;
+        width: 100%;
+    }
+    .about-box{
+        width: 90%;
+        margin: 1rem 4rem;
+        display: flex;
+        
+    }
+    .about-box h4{
+        margin: 5rem 2rem;
+    }
+}

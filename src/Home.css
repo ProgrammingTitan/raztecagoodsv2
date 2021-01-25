@@ -1,0 +1,49 @@
+
+.img-wrap{
+    position: relative;
+        display: inline-block;
+        width: 100%;
+}
+
+.img-wrap img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+        text-align: center;
+        width: 100%;
+        height: auto;
+}
+
+.img-wrap h1{
+    position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: var(--primary-double-hover-Color);
+        color: #fff;
+        /* visibility: hidden; */
+        opacity: 0.6;
+        margin: auto;
+        margin-bottom: 0;
+        text-align: center;
+        display: flex;
+      justify-content: center;
+      align-items: center;
+    /* transition effect. not necessary */
+    transition: opacity .2s, visibility .2s;
+}
+
+@media(max-width: 699px)
+{
+    .img-wrap h1{
+        font-size: 1rem;
+    }
+}
+
+@media(min-width: 700px)
+{
+    .img-wrap h1{
+        font-size: 3rem;
+    }
+}
