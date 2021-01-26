@@ -22,7 +22,7 @@ const Example = (props) => {
 
   return (
     <div >
-      <Navbar style={{backgroundColor: 'rgba(255,255,255,0.4)'},{color:'black'},{fontWeight:'bolder'}} fixed="top" light expand="md">
+      <Navbar style={{background: 'url(255,255,255,0.4)'},{color:'black'},{fontWeight:'bolder'}} fixed="top" light expand="md">
         <NavbarBrand href="/">Razteca Goods</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
@@ -31,7 +31,7 @@ const Example = (props) => {
               <NavLink href="/About">About</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/Products">Shop</NavLink>
+              <NavLink href="/Shop">Shop</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/ContactUs">Contact Us</NavLink>

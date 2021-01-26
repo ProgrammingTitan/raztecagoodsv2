@@ -1,3 +1,22 @@
+.header-pic{
+    width: 100%;
+}
+
 .page{
     margin: 8rem 6rem;
+}
+
+.crop {
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    position: fixed;
+    top:0;
+}
+
+.crop img {
+    width: 100%;
+    height: 300px;
+    margin: -85px 0 0 0px;
+    z-index: 0;
 }

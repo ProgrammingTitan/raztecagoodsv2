@@ -5,7 +5,8 @@ import './Contact.css';
 // import ErrorNotice from '../../misc/ErrorNotice';
 
 
-export default function OrderSubmit(props) {
+export default function Contact(props) {
+    
 
     const [name, setName] = useState();
     const [phoneNumber, setPhoneNumber] = useState();
@@ -18,17 +19,21 @@ export default function OrderSubmit(props) {
 
 
     const submit = async (e) => {
+        
         e.preventDefault();
         try{
 
     
-        setError("Thank you for your submission! We will contact you soon for further details!");
+        // setError("Thank you for your submission! We will contact you soon for further details!");
         // window.location.reload(false);
         const templateId = process.env.REACT_APP_TEMPLATE_ID;
         const serviceID = process.env.REACT_APP_SERVICE_ID;
-        sendFeedback(serviceID, templateId, { from_name: name, message: e.target.description.value , reply_to: email, phone_number: phoneNumber, type: e.target.type.value })
-    
+        sendFeedback(serviceID, templateId, { from_name: name, message: description , reply_to: email, phone_number: phoneNumber })
+        
        
+        // window.location.reload(false);
+        alert("Message Sent! Thank you for the feedback");
+        window.location.reload(false);
     }catch (err) {
         console.log(err);
         // err.response.data.msg && setError(err.response.data.msg);
@@ -38,6 +43,7 @@ export default function OrderSubmit(props) {
 
     
     const sendFeedback = (serviceID, templateId, variables) => {
+        
         window.emailjs.send(
             serviceID, templateId,
             variables
@@ -49,7 +55,12 @@ export default function OrderSubmit(props) {
 
 
     return (
+        <div>
+            <div className="crop">
+            <img className='header-pic' src='https://cache.marriott.com/marriottassets/destinations/hero/palm-springs-destination.jpg?interpolation=progressive-bilinear' />
+            </div>
         <div className="page">
+            <alert>help</alert>
             <h1 className="control-panel-heading">Contact Us:</h1>
             {/* {error && <ErrorNotice message={error} clearError={ () => setError(undefined)} /> } */}
             <form className="form" onSubmit={submit}  enctype="multipart/form-data">
@@ -65,8 +76,10 @@ export default function OrderSubmit(props) {
                 <label htmlFor="description">Feedback</label>
                 <input id="description" type="text"  value={props.description} onChange = {e => setDescription(e.target.value)}/>
 
-                <input type = "submit" className="order-submit" value="Submit" />
+                <input type = "submit" className="order-submit" value="Contact Us" />
             </form>
+
+            </div>
         </div>
     );
 }
